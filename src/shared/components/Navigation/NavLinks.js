@@ -13,6 +13,9 @@ const NavLinks = props => {
     <li>
       <NavLink to="/auth">LOGIN</NavLink>
     </li>
+    <li>
+      <NavLink to="/signup">SIGN UP</NavLink>
+    </li>
   </ul>
 
 };
