@@ -83,7 +83,7 @@ export default function SignUpPage() {
               variant="contained"
               color="primary"
               className={classes.submit}
-              href="./"
+              href="./UserDetailsUpdate"
             >
               Sign Up
             </Button>
