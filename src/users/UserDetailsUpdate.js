@@ -35,7 +35,6 @@ export default function UserDetailsUpdate() {
                   autoComplete="fname"
                   name="firstName"
                   variant="outlined"
-                  required
                   fullWidth
                   id="firstName"
                   label="First Name"
@@ -46,7 +45,6 @@ export default function UserDetailsUpdate() {
               <Grid item xs={12} sm={6}>
                 <TextField
                   variant="outlined"
-                  required
                   fullWidth
                   id="lastName"
                   label="Last Name"
@@ -58,7 +56,6 @@ export default function UserDetailsUpdate() {
               <Grid item xs={12}>
                 <TextField
                   variant="outlined"
-                  required
                   fullWidth
                   id="email"
                   label="Email Address"
@@ -70,16 +67,33 @@ export default function UserDetailsUpdate() {
               <Grid item xs={12}>
                 <TextField
                   variant="outlined"
-                  required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
+                  id="curr_pwd"
+                  label="Current Pasword"
+                  name="curr_pwd"
+                  autoComplete="curr_pwd"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="new_pwd"
+                  label="New Pasword"
+                  name="new_pwd"
+                  autoComplete="new_pwd"
                 />
               </Grid>
             </Grid>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              href="./"
+            >
+              change password
+            </Button>
             <Button
               type="submit"
               fullWidth
