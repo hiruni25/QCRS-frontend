@@ -104,6 +104,16 @@ export default function UserDetailsUpdate() {
             >
               Update
             </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="#fc0320"
+              className={classes.submit}
+              href="./"
+            >
+              Delete your account
+            </Button>
           </form>
         </div>
       </Container>
