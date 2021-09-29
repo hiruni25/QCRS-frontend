@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -30,27 +29,38 @@ export default function UserDetailsUpdate() {
           </Typography>
           <form className={classes.form} noValidate onSubmit={update}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
-                  autoComplete="fname"
-                  name="firstName"
+                  autoComplete="usr_id"
+                  name="usr_id"
                   variant="outlined"
                   fullWidth
-                  id="firstName"
-                  label="First Name"
-                  defaultValue="Nethmi"
+                  id="usr_id"
+                  label="User ID"
+                  defaultValue="112233LB"
                   autoFocus
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   variant="outlined"
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="lname"
-                  defaultValue="Sankalpana"
+                  id="name"
+                  label="Name"
+                  name="name"
+                  autoComplete="name"
+                  defaultValue="Nethmi Sankalpana"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="address"
+                  label="Address"
+                  name="address"
+                  autoComplete="address"
+                  defaultValue="No 269/5/E, Mudungoda Waththa, Mudungoda"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -58,7 +68,7 @@ export default function UserDetailsUpdate() {
                   variant="outlined"
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Email"
                   name="email"
                   autoComplete="email"
                   defaultValue="nethmiwijebandara@gmail.com"
@@ -68,10 +78,21 @@ export default function UserDetailsUpdate() {
                 <TextField
                   variant="outlined"
                   fullWidth
+                  id="contact"
+                  label="Contact Number"
+                  name="contact"
+                  autoComplete="contact"
+                  defaultValue="0112233345"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
                   id="curr_pwd"
                   label="Current Pasword"
                   name="curr_pwd"
-                  autoComplete="curr_pwd"
+                  autoComplete="curr_pwd"                  
                 />
               </Grid>
               <Grid item xs={12}>
@@ -84,27 +105,36 @@ export default function UserDetailsUpdate() {
                   autoComplete="new_pwd"
                 />
               </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="cnfrm_pwd"
+                  label="Confirm Pasword"
+                  name="cnfrm_pwd"
+                  autoComplete="cnfrm_pwd"
+                />
+                </Grid>
             </Grid>
             <Button
-              type="submit"
+              type="save"
               variant="contained"
               color="primary"
               className={classes.submit}
               href="./"
             >
-              change password
+              Save Chnages
             </Button>
             <Button
-              type="submit"
-              fullWidth
+              type="cancel"
               variant="contained"
-              color="primary"
+              color="#fc0320"
               className={classes.submit}
-              href="./"
+              href="./UserDetailsUpdate"
             >
-              Update
+              Canncel
             </Button>
-            <Button
+            {/* <Button
               type="submit"
               fullWidth
               variant="contained"
@@ -113,7 +143,7 @@ export default function UserDetailsUpdate() {
               href="./"
             >
               Delete your account
-            </Button>
+            </Button> */}
           </form>
         </div>
       </Container>
