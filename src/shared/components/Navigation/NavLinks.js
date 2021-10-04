@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavLinks.css';
+import PersonIcon from '@mui/icons-material/Person';
 
 const NavLinks = props => {
     return <ul className="nav-links">
@@ -11,7 +12,7 @@ const NavLinks = props => {
       <NavLink to="/users">USERS</NavLink>
     </li>
     <li>
-      <NavLink to="/auth">LOGIN</NavLink>
+      <NavLink to="/auth"><PersonIcon/></NavLink>
     </li>
   </ul>
 
