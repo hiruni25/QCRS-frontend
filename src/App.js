@@ -3,9 +3,11 @@ import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom
 import './App.css';
 import Users from './users/pages/Users';
 import Centers from './centers/pages/Centers';
+import AddCenter from './centers/pages/AddCenter';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import Auth from './users/pages/Auth';
 import { AuthContext } from './shared/context/auth-context';
+import UpdateUser from './users/pages/UpdateUser';
 
 const App = () => {
   const [token, setToken] = useState(false);
@@ -29,8 +31,14 @@ const App = () => {
     <Route path ="/" exact>
       <Centers/>
       </Route>
+      <Route path ="/addcenter" exact>
+      <AddCenter/>
+      </Route>
       <Route path ="/users" exact>
       <Users/>
+      </Route>
+      <Route path ="/updateuser" exact>
+      <UpdateUser/>
       </Route>
       <Redirect to="/"/>
       </Switch>
