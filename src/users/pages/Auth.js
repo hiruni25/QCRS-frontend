@@ -9,7 +9,8 @@ import {
   VALIDATOR_EMAIL,
   VALIDATOR_MINLENGTH,
   VALIDATOR_REQUIRE,
-  VALIDATOR_PHONE
+  VALIDATOR_PHONE,
+  VALIDATOR_PASSWORD
 } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import { AuthContext } from '../../shared/context/auth-context';
@@ -46,6 +47,7 @@ const Auth = () => {
           name: undefined,
           address: undefined,
           contact_no: undefined,
+          confirm_password:undefined,
         },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
@@ -62,6 +64,10 @@ const Auth = () => {
             isValid: false
           },
           contact_no: {
+            value: '',
+            isValid: false
+          },
+          confirm_password: {
             value: '',
             isValid: false
           }
@@ -140,7 +146,7 @@ const Auth = () => {
     <ErrorModal error={error} onClear={clearError} />
     <Card className="authentication">
     {isLoading && <LoadingSpinner asOverlay />}
-        <h2>Login Required</h2>
+        <h2>{isLoginMode ? 'Login Required' : 'Sign Up'}</h2>
         <hr />
       <form onSubmit={authSubmitHandler}>
         {!isLoginMode && (
@@ -172,6 +178,17 @@ const Auth = () => {
           errorText="Please enter a valid password, at least 6 characters."
           onInput={inputHandler}
         />
+        {!isLoginMode && (
+          <Input
+          element="input"
+          id="confirm_password"
+          type="password"
+          label="Confirm Password"
+          validators={[VALIDATOR_PASSWORD(formState.inputs.password.value)]}
+          errorText="Please confirm password."
+          onInput={inputHandler}
+        />
+        )}
         {!isLoginMode && (
         <Input
           element="input"
