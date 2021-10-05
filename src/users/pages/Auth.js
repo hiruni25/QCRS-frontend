@@ -8,7 +8,8 @@ import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import {
   VALIDATOR_EMAIL,
   VALIDATOR_MINLENGTH,
-  VALIDATOR_REQUIRE
+  VALIDATOR_REQUIRE,
+  VALIDATOR_PHONE
 } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import { AuthContext } from '../../shared/context/auth-context';
@@ -188,7 +189,7 @@ const Auth = () => {
           id="contact_no"
           type="text"
           label="Contact no"
-          validators={[VALIDATOR_REQUIRE()]}
+          validators={[VALIDATOR_PHONE()]}
           errorText="Please enter a valid contact no."
           onInput={inputHandler}
         />
