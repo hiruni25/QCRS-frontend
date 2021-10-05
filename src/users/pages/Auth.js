@@ -14,11 +14,13 @@ import { useForm } from '../../shared/hooks/form-hook';
 import { AuthContext } from '../../shared/context/auth-context';
 import './Auth.css';
 import { useHttpClient } from '../../shared/hooks/http-hook';
+import { useHistory } from 'react-router';
 
 const Auth = () => {
   const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const history = useHistory();
 
 
   const [formState, inputHandler, setFormData] = useForm(
@@ -121,8 +123,9 @@ const Auth = () => {
             'Content-Type': 'application/json'
           }
         );
-        console.log(responseData.userId);
-        auth.login(responseData.userId, responseData.token);
+        // console.log(responseData.userId);
+        // auth.login(responseData.userId, responseData.token);
+        history.push('/signup');
         
       } catch (err) {
         console.log(err);
