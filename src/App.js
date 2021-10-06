@@ -4,6 +4,7 @@ import './App.css';
 import Users from './users/Users';
 import SignUP from './users/SignUP/SignUpPage';
 import UserDetailsUpdate from './users/UserDetailsUpdate';
+import Profile from './users/Profile/Profile';
 import Centers from './centers/pages/Centers';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 
@@ -20,6 +21,7 @@ const App = () => {
       </Route>
       <Route path ="/UserDetailsUpdate" exact>      <UserDetailsUpdate/>      </Route>
       <Route path ="/SignUP" exact>      <SignUP/>      </Route>
+      <Route path ="/profile" exact>      <Profile/>      </Route>
       <Redirect to="/"/>
       </Switch>
       </main>

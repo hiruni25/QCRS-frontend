@@ -5,10 +5,18 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import { useStyles } from "./UserDetailsUpdate.styles.js";
+import { useStyles } from "./UserProfile.styles.js";
 
 export default function UserDetailsUpdate() {
   const classes = useStyles();
+
+  const details= ["112233KL", "Nethmi Sankalpana", "No 269/5/E, Mudungoda Waththa, Mudungoda","Nethmi@gmail.com","0112233456"];
+  const labels=["User ID: ","Name: ","Address: ","Email: ", "Contact NO: "]
+  const data = []
+  var arrayLength = details.length;
+  for (var i = 0; i < arrayLength; i++) {
+    data[i]= labels[i]+details[i]
+}
 
   //to be implemented
   //function to handle update request
@@ -25,19 +33,19 @@ export default function UserDetailsUpdate() {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-            User Details Update
+            User Profile
           </Typography>
           <form className={classes.form} noValidate onSubmit={update}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
                   autoComplete="usr_id"
-                  name="usr_id"
+                  name="usr_id" 
                   variant="outlined"
                   fullWidth
                   id="usr_id"
-                  label="User ID"
-                  defaultValue="112233LB"
+                //   label="User ID"
+                  defaultValue={data[0]}
                   autoFocus
                 />
               </Grid>
@@ -46,10 +54,10 @@ export default function UserDetailsUpdate() {
                   variant="outlined"
                   fullWidth
                   id="name"
-                  label="Name"
+                //   label="Name"
                   name="name"
                   autoComplete="name"
-                  defaultValue="Nethmi Sankalpana"
+                  defaultValue={data[1]}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -57,10 +65,10 @@ export default function UserDetailsUpdate() {
                   variant="outlined"
                   fullWidth
                   id="address"
-                  label="Address"
+                //   label="Address"
                   name="address"
                   autoComplete="address"
-                  defaultValue="No 269/5/E, Mudungoda Waththa, Mudungoda"
+                  defaultValue={data[2]}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -68,10 +76,10 @@ export default function UserDetailsUpdate() {
                   variant="outlined"
                   fullWidth
                   id="email"
-                  label="Email"
+                //   label="Email"
                   name="email"
                   autoComplete="email"
-                  defaultValue="nethmiwijebandara@gmail.com"
+                  defaultValue={data[3]}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -79,60 +87,33 @@ export default function UserDetailsUpdate() {
                   variant="outlined"
                   fullWidth
                   id="contact"
-                  label="Contact Number"
+                //   label="Contact Number"
                   name="contact"
                   autoComplete="contact"
-                  defaultValue="0112233345"
+                  defaultValue={data[4]}
                 />
               </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="curr_pwd"
-                  label="Current Pasword"
-                  name="curr_pwd"
-                  autoComplete="curr_pwd"                  
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="new_pwd"
-                  label="New Pasword"
-                  name="new_pwd"
-                  autoComplete="new_pwd"
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="cnfrm_pwd"
-                  label="Confirm Pasword"
-                  name="cnfrm_pwd"
-                  autoComplete="cnfrm_pwd"
-                />
-                </Grid>
+              
+              
+              
             </Grid>
             <Button
               type="save"
               variant="contained"
               color="primary"
               className={classes.submit}
-              href="./profile"
+              href="./UserDetailsUpdate"
             >
-              Save Chnages
+              Edit Details
             </Button>
             <Button
               type="cancel"
               variant="contained"
               color="#fc0320"
               className={classes.submit}
-              href="./UserDetailsUpdate"
+              href="./"
             >
-              Canncel
+              Delete Account
             </Button>
             {/* <Button
               type="submit"
