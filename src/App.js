@@ -8,6 +8,8 @@ import MainNavigation from './shared/components/Navigation/MainNavigation';
 import Auth from './users/pages/Auth';
 import { AuthContext } from './shared/context/auth-context';
 import UpdateUser from './users/pages/UpdateUser';
+import UserProfile from './users/pages/UserProfile';
+import UpdateCenter from './centers/pages/UpdateCenter'
 
 let logoutTimer;
 
@@ -73,10 +75,19 @@ const App = () => {
       <Route path ="/addcenter" exact>
       <AddCenter/>
       </Route>
+      <Route path ="/updatecenter" exact>
+      <UpdateCenter/>
+      </Route>
       <Route path ="/users" exact>
       <Users/>
       </Route>
       <Route path ="/updateuser" exact>
+      <UpdateUser/>
+      </Route>
+      <Route path ="/userprofile" exact>
+      <UserProfile/>
+      </Route>
+      <Route path="/users/:userId">
       <UpdateUser/>
       </Route>
       <Redirect to="/"/>
