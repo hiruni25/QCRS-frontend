@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/knight-squad/frontend/static/css/main.469271af.chunk.css",
-    "main.js": "/knight-squad/frontend/static/js/main.f060761a.chunk.js",
-    "main.js.map": "/knight-squad/frontend/static/js/main.f060761a.chunk.js.map",
-    "runtime-main.js": "/knight-squad/frontend/static/js/runtime-main.d5ce69fa.js",
-    "runtime-main.js.map": "/knight-squad/frontend/static/js/runtime-main.d5ce69fa.js.map",
-    "static/js/2.d578b30d.chunk.js": "/knight-squad/frontend/static/js/2.d578b30d.chunk.js",
-    "static/js/2.d578b30d.chunk.js.map": "/knight-squad/frontend/static/js/2.d578b30d.chunk.js.map",
-    "index.html": "/knight-squad/frontend/index.html",
-    "static/css/main.469271af.chunk.css.map": "/knight-squad/frontend/static/css/main.469271af.chunk.css.map",
-    "static/js/2.d578b30d.chunk.js.LICENSE.txt": "/knight-squad/frontend/static/js/2.d578b30d.chunk.js.LICENSE.txt"
+    "main.css": "/frontend/static/css/main.0e7afb94.chunk.css",
+    "main.js": "/frontend/static/js/main.f060761a.chunk.js",
+    "main.js.map": "/frontend/static/js/main.f060761a.chunk.js.map",
+    "runtime-main.js": "/frontend/static/js/runtime-main.f7fe3b97.js",
+    "runtime-main.js.map": "/frontend/static/js/runtime-main.f7fe3b97.js.map",
+    "static/js/2.d578b30d.chunk.js": "/frontend/static/js/2.d578b30d.chunk.js",
+    "static/js/2.d578b30d.chunk.js.map": "/frontend/static/js/2.d578b30d.chunk.js.map",
+    "index.html": "/frontend/index.html",
+    "static/css/main.0e7afb94.chunk.css.map": "/frontend/static/css/main.0e7afb94.chunk.css.map",
+    "static/js/2.d578b30d.chunk.js.LICENSE.txt": "/frontend/static/js/2.d578b30d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5ce69fa.js",
+    "static/js/runtime-main.f7fe3b97.js",
     "static/js/2.d578b30d.chunk.js",
-    "static/css/main.469271af.chunk.css",
+    "static/css/main.0e7afb94.chunk.css",
     "static/js/main.f060761a.chunk.js"
   ]
 }
