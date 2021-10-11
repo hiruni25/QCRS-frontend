@@ -48,7 +48,7 @@ const DropdownLogout = () => {
 
             >
 
-                <MenuItem onClick={handleClose} component={Link} to={"/"}>
+                <MenuItem onClick={handleClose} component={Link} to={"/userprofile"}>
                     User Profile
                 </MenuItem>
                 <MenuItem onClick={handleClose} >
