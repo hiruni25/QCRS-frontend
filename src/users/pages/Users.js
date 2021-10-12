@@ -50,3 +50,18 @@ const Users = () => {
 };
 
 export default Users;
+
+
+
+/* <Route path ="/UserDetailsUpdate" exact>      <UserDetailsUpdate/>      </Route>
+      <Route path ="/SignUP" exact>      <SignUP/>      </Route>
+      <Route path ="/profile" exact>      <Profile/>      </Route>
+
+
+
+    <li>
+      <NavLink to="/signup">SIGN UP</NavLink>
+    </li>
+    <li>
+      <NavLink to="/profile">PROFILE</NavLink>
+    </li> */

@@ -18,9 +18,6 @@ export default function UserDetailsUpdate() {
 
   return (
     <div className={classes.root}>
-
-
-
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -92,7 +89,7 @@ export default function UserDetailsUpdate() {
                   id="curr_pwd"
                   label="Current Pasword"
                   name="curr_pwd"
-                  autoComplete="curr_pwd"                  
+                  autoComplete="curr_pwd"
                 />
               </Grid>
               <Grid item xs={12}>
@@ -114,7 +111,7 @@ export default function UserDetailsUpdate() {
                   name="cnfrm_pwd"
                   autoComplete="cnfrm_pwd"
                 />
-                </Grid>
+              </Grid>
             </Grid>
             <Button
               type="save"

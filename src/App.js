@@ -15,6 +15,7 @@ import { AuthContext } from "./shared/context/auth-context";
 import UpdateUser from "./users/pages/UpdateUser";
 import UserProfile from "./users/pages/UserProfile";
 import UpdateCenter from "./centers/pages/UpdateCenter";
+import Profile from "./users/Profile/Profile";
 
 let logoutTimer;
 
@@ -92,7 +93,8 @@ const App = () => {
           <UpdateUser />
         </Route>
         <Route path="/userprofile" exact>
-          <UserProfile />
+          
+          <Profile />
         </Route>
         <Route path="/users/:userId">
           <UpdateUser />
