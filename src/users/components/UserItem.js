@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../shared/components/FormElements/Button'
 import Card from '../../shared/components/UIElements/Card';
 import './UserItem.css';
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from '@material-ui/icons/Person';
 
 
 const UserItem = props => {

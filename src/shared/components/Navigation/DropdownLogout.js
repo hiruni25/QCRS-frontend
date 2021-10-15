@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from '@material-ui/icons/Person';
 import {Link} from "react-router-dom";
 
 import {AuthContext} from "../../context/auth-context";

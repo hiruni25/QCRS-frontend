@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavLinks.css';
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from '@material-ui/icons/Person';
 import { AuthContext } from '../../context/auth-context';
 import DropdownMenu from './DropDownMenu';
 import DropdownLogout from './DropdownLogout';
@@ -27,6 +27,11 @@ const NavLinks = props => {
     {auth.isLoggedIn &&(
     <li>
       <NavLink to="/addcenter">ADD CENTER</NavLink>
+    </li>
+    )}
+    {auth.isLoggedIn &&(
+    <li>
+      <NavLink to="/updatecenter">UPDATE CENTER</NavLink>
     </li>
     )}
     {auth.isLoggedIn &&(

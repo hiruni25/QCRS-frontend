@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom
 import './App.css';
 import Users from './users/pages/Users';
 import Centers from './centers/pages/Centers';
+import Center from './centers/pages/Center';
+import UpdateCenter from './centers/pages/UpdateCenters';
 import AddCenter from './centers/pages/AddCenter';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import Auth from './users/pages/Auth';
@@ -34,6 +36,12 @@ const App = () => {
       <Route path ="/addcenter" exact>
       <AddCenter/>
       </Route>
+      <Route path ="/updatecenter" exact>
+      <UpdateCenter/>
+      </Route>
+      <Route path ="/center" exact>
+      <Center/>
+      </Route>
       <Route path ="/users" exact>
       <Users/>
       </Route>
@@ -49,6 +57,9 @@ const App = () => {
     <Switch>
       <Route path ="/" exact>
       <Centers/>
+      </Route>
+      <Route path ="/center" exact>
+      <Center/>
       </Route>
       <Route path="/auth">
         <Auth />
