@@ -24,6 +24,7 @@ const UsersList = props => {
           id={user.userId}
           name={user.name}
           email={user.email}
+          onDelete = {props.onDeleteUser}
           // image={user.image}
           
         />

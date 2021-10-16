@@ -36,6 +36,13 @@ const Users = () => {
     setError(null);
   };
 
+  const onDeleteUserHandler = deletedUserId => {
+    setLoadedUsers(prevUsers => 
+      prevUsers.filter(user => user.id !== deletedUserId)
+
+    );
+  };
+
   return (
     <React.Fragment>
       <ErrorModal error={error} onClear={errorHandler} />
@@ -44,7 +51,7 @@ const Users = () => {
           <LoadingSpinner />
         </div>
       )}
-      {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
+      {!isLoading && loadedUsers && <UsersList items={loadedUsers} onDeleteUser={onDeleteUserHandler}/>}
     </React.Fragment>
   );
 };
